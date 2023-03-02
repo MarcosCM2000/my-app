@@ -5,9 +5,12 @@ import TodoList from './components/TodoList';
 
 const App: React.FC = () => {
   const todos =[{id: 't1', text: 'Finish the course'}];
+  const todoAddHandler = (text: string) => {
+
+  };
   return (
     <div className="App">
-      <NewTodo />
+      <NewTodo onAddTodo={todoAddHandler}/>
       <TodoList items={todos}/>
     </div>
   );
